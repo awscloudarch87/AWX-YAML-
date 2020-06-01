@@ -1,6 +1,5 @@
 - hosts: 35.175.115.106
-  remote_user: mahesh
-  become: true
+   become: true
   vars:
     project_root: /var/www/html
   tasks:  
