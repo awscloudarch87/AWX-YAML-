@@ -1,4 +1,4 @@
-- hosts: 35.175.115.106
+- hosts: 18.207.101.96
    become: true
   vars:
     project_root: /var/www/html
