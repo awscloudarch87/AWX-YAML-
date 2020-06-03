@@ -1,3 +1,4 @@
+---
 - hosts: 18.207.101.96
    become: true
   vars:
