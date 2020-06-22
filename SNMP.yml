@@ -1,0 +1,22 @@
+---
+- name: SNMP test
+  hosts: testhost
+  gather_facts: no
+
+  vars:
+    ansible_user: AD username
+    ansible_password: AD password
+    ansible_connection: winrm
+    ansible_winrm_transport: ntlm
+    ansible_winrm_server_cert_validation: ignore
+    snmp_community_ro:
+      - private
+    snmp_managers:
+      - localhost
+      - 10.0.0.56
+  tasks:
+  - name: Replace SNMP communities
+    win_snmp:
+      communities: "{{ snmp_community_ro}}"
+      managers: "{{ snmp_managers }}"
+      action: set
