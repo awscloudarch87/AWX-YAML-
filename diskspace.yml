@@ -1,5 +1,5 @@
 ---
-- hosts: 3.218.249.157
+- hosts: 10.0.0.8
   tasks:
   - name: Get disk facts
     win_disk_facts:
